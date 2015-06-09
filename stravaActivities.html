@@ -1,0 +1,14 @@
+<div class="strava-activities-widget" ng-controller="stravaActivitiesCtrl" ng-class="{'activity-run': activity.isRun, 'activity-ride': activity.isRide}">
+    <div class="strava-activities">
+        <div ng-show="activity.visible" class="strava-activity">
+            <span class="date">{{ activity.date|date:'d MMM yyyy' }}</span>
+            <span class="avatar">
+            <img ng-src="{{ activity.athlete.avatar }}" class="img-circle"/>
+            </span>
+            <span class="athlete">{{ activity.athlete.name }}</span>
+
+            <span class="distance">{{ activity.distance }} km</span>
+            <span class="distance">{{ activity.average }} {{ activity.average_metric }}</span>
+        </div>
+    </div>
+</div>
